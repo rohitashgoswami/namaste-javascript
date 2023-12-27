@@ -91,49 +91,49 @@
             first(); // Called firsts
             
 
-             //>>>>>> var, Let and Const >>>>>>
+        //>>>>>> var, Let and Const >>>>>>
+
+
+    //let and const can also hoiste but ye thoda alag behave karte hai 
+    
+    // console.log(a); //it gives us an error (ReferenceError: Cannot access 'a' before initialization)
+    // let a = 10;     // (let will be stored in seprate spece)
+    // var b = 100;    //(var will be atteched in global scope) 
+
+    // we can't access let and const before initialization 
+    // let and const hoiste in temporal dead zone (wo time jisme let and const hoiste hote h or jab tak initialize nahi hote hai uske bich ke  time ko temporal dead zone kahte hai)
+
+    //  let a =10;
+    //  let a = 100; it's gives us an syntaxError because let and const can't decalare multiple time with same variable
 
     
-            //let and const can also hoiste but ye thoda alag behave karte hai 
-            
-            // console.log(a); //it gives us an error (ReferenceError: Cannot access 'a' before initialization)
-            // let a = 10;     // (let will be stored in seprate spece)
-            // var b = 100;    //(var will be atteched in global scope) 
+    
+    //defferance between let and const
 
-            // we can't access let and const before initialization 
-            // let and const hoiste in temporal dead zone (wo time jisme let and const hoiste hote h or jab tak initialize nahi hote hai uske bich ke  time ko temporal dead zone kahte hai)
+    // let a;
+    // const b = 100;
+    // a = 10;
+    // console.log(a); //(it's fine because let can be inisitialize anywhere in that scope)
 
-            //  let a =10;
-            //  let a = 100; it's gives us an syntaxError because let and const can't decalare multiple time with same variable
+    // let a = 10;
+    // const b; (decalared b )
+    // b = 100; (assigned b) (but in case of const we can't assign value later)
+    // console.log(b);  //(this is wrong kyuki const ek hi time par inisitialize karna padta hai(syntaxError ) )
 
-            
-            
-            //defferance between let and const
+    
+        */
+    
+    //>>>>>>  Let and Const Block scope >>>>>>
 
-            // let a;
-            // const b = 100;
-            // a = 10;
-            // console.log(a); //(it's fine because let can be inisitialize anywhere in that scope)
+    //   {
+    //     var a = 10; //( stored in global scope)
+    //     let b = 20; //(stored in block scope)
+    //     const c = 30; //(stored in block scope)
+    //     console.log(a);
+    //     console.log(b);
+    //     console.log(c);
+    //   } // (let and const {} ke bahar access nahi ho sakte)
 
-            // let a = 10;
-            // const b; (decalared b )
-            // b = 100; (assigned b) (but in case of const we can't assign value later)
-            // console.log(b);  //(this is wrong kyuki const ek hi time par inisitialize karna padta hai(syntaxError ) )
-
-            
-                */
-            
-            //>>>>>>  Let and Const Block scope >>>>>>
-
-            //   {
-            //     var a = 10; //( stored in global scope)
-            //     let b = 20; //(stored in block scope)
-            //     const c = 30; //(stored in block scope)
-            //     console.log(a);
-            //     console.log(b);
-            //     console.log(c);
-            //   } // (let and const {} ke bahar access nahi ho sakte)
-
-                // console.log(a); // (it will execute but b and c can't kyuki let and const are block scope )
-                // console.log(b);
-                  // console.log(c);
+    // console.log(a); // (it will execute but b and c can't kyuki let and const are block scope )
+    // console.log(b);
+    // console.log(c);
