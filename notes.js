@@ -42,3 +42,8 @@
         (scope chain ke top me hamesha global scope hota hai)
 
         Lexical Scoping : Inner functionn can get access to their parent functions variables but parent functions can't access their chaild functions variables.
+
+
+
+
+        function along with it's lexicale scope bundal together  form of closure that is closure
